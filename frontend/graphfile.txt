@@ -1,15 +1,11 @@
 digraph G {
-	recommendation engine (  ):
-	merchandise sales ( ecommerce platform ): -> revenue;
-	page views (  ): -> ad views; -> revenue;
-	revenue (  ):
-	ticket sales ( ticketing platform ):
-	ad views (  ): -> revenue;
-	users (  ): -> more playlists; -> page views; -> ad views; -> revenue;
-	ticketing platform ( ecommerce platform ):
-	music sales ( ecommerce platform ): -> revenue;
-	advertise local events (  ): -> ticket sales;
-	better recommendations ( recommendation engine ): -> music sales; -> revenue;
-	more playlists (  ):
-	ecommerce platform (  ):
+	ecommerce_platform -> merchandise_sales -> revenue;
+	page_views -> ad_views -> revenue;
+	ticketing_platform -> ticket_sales;
+	ad_views -> revenue;
+	users -> more_playlists -> page_views -> ad_views -> revenue;
+	ecommerce_platform -> ticketing_platform;
+	ecommerce_platform -> music_sales -> revenue;
+	advertise_local_events -> ticket_sales;
+	recommendation_engine -> better_recommendations -> music_sales -> revenue;
 }
