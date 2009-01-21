@@ -1,0 +1,34 @@
+digraph G {
+	node [label="\N"];
+	graph [bb="0,0,859,324"];
+	ecommerce_platform [pos="471,162", width="2.61", height="0.50"];
+	merchandise_sales [pos="382,90", width="2.31", height="0.50"];
+	revenue [pos="161,18", width="1.14", height="0.50"];
+	page_views [pos="71,162", width="1.56", height="0.50"];
+	ad_views [pos="99,90", width="1.33", height="0.50"];
+	ticketing_platform [pos="778,90", width="2.25", height="0.50"];
+	ticket_sales [pos="679,18", width="1.56", height="0.50"];
+	users [pos="67,306", width="0.86", height="0.50"];
+	more_playlists [pos="67,234", width="1.86", height="0.50"];
+	music_sales [pos="223,90", width="1.61", height="0.50"];
+	advertise_local_events [pos="581,90", width="2.72", height="0.50"];
+	recommendation_engine [pos="257,234", width="2.92", height="0.50"];
+	better_recommendations [pos="252,162", width="2.97", height="0.50"];
+	ecommerce_platform -> merchandise_sales [pos="e,404,108 449,144 438,135 424,124 412,114"];
+	merchandise_sales -> revenue [pos="e,194,29 336,75 297,62 242,44 204,32"];
+	page_views -> ad_views [pos="e,86,108 72,144 74,136 78,126 82,117"];
+	ad_views -> revenue [pos="e,137,33 103,72 109,62 120,50 130,40"];
+	ticketing_platform -> ticket_sales [pos="e,702,34 754,73 741,63 724,51 710,40"];
+	ad_views -> revenue [pos="e,146,35 114,73 122,64 131,53 139,43"];
+	users -> more_playlists [pos="e,67,252 67,288 67,280 67,271 67,262"];
+	more_playlists -> page_views [pos="e,70,180 68,216 69,208 69,199 69,190"];
+	page_views -> ad_views [pos="e,98,108 84,144 88,136 92,126 95,118"];
+	ad_views -> revenue [pos="e,157,36 124,74 133,65 144,55 151,45"];
+	ecommerce_platform -> ticketing_platform [pos="e,722,103 531,148 583,136 658,118 712,105"];
+	ecommerce_platform -> music_sales [pos="e,265,102 419,147 376,135 317,118 275,105"];
+	music_sales -> revenue [pos="e,170,36 202,73 193,64 184,54 177,44"];
+	advertise_local_events -> ticket_sales [pos="e,656,35 605,72 618,63 634,51 648,41"];
+	recommendation_engine -> better_recommendations [pos="e,253,180 256,216 255,208 255,199 254,190"];
+	better_recommendations -> music_sales [pos="e,230,108 245,144 241,136 238,126 234,117"];
+	music_sales -> revenue [pos="e,180,34 214,72 207,63 197,51 187,41"];
+}
